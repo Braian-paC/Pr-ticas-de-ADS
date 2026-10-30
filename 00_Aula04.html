@@ -1,0 +1,72 @@
+<!--
+Desenvolver uma página com um formulário de cadastro (tema à escolha) que contenha os seguintes elementos de formulário:
+radio, select, checkbox, text, date, email, textarea, submit.
+method="get", action="teste.jsp"
+
+já foi: radio, select, checkbox, text, date, email, textarea, **submit**.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula04</title>
+</head>
+<body>
+    <form method="GET" action="teste.jsp" style="border-bottom: solid;">
+        <!-- Nome Completo -->
+        <label for="name">Nome completo:</label>
+        <input type="text" id="nome" required>
+        
+        <!-- E-mail -->
+        <label for="email" style="margin-left: 15px;">Email:</label>
+        <input type="email" id="email" pattern=".+@gmail\.com" required>
+
+        <!-- Data de Nascimento -->
+        <label for="nascimento" style="margin-left: 15px;">Data de nascimento:</label>
+        <input type="date" id="nascimento" required>
+
+        <button type="submit" style="width: 5rem;">Enviar</button>
+
+    </form>
+
+    <form id="questoes" style="display: flex; height: 42.75rem; flex-direction: column;">
+        <!-- Questão 01 -->
+        <fieldset>
+            <label for="questao_01">1) Em quem você votaria para presidente?
+                <select id="questao_01_select">
+                    <option value="Nulo">Nulo</option>
+                    <option value="Lula">Lula</option>
+                    <option value="Bolsonaro">Bolsonaro</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <!-- Questão 02 -->
+        <fieldset>
+            <label>2) Você se identifica a qual posição?</label>
+            <input type="radio" id="Esquerda" name="Grupo1">
+            <label for="Esquerda">Esquerda</label>
+            <input type="radio" id="Direita" name="Grupo1">
+            <label for="Direita">Direita</label>
+            <input type="radio" id="Centro" name="Grupo1">
+            <label for="Centro">Centro</label>
+        </fieldset>
+
+        <!-- Questão 03 -->
+        <fieldset>
+            <label for="textarea">3) Qual a proposta que mais te agrada no candidato? (ignore se você votou nulo)</label>
+            <textarea id="textarea" rows="3" cols="100"></textarea>
+        </fieldset>
+
+        <!-- Questão 04 -->
+        <fieldset>
+            <label for="checkbox">4) Você votou na eleição de 2026?</label>
+            <input type="checkbox" id="checkbox">
+        </fieldset>
+
+        <button type="submit" style="width: 5rem;">Enviar</button>
+    </form>
+</body>
+</html>
