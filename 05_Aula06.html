@@ -1,0 +1,34 @@
+<!--
+Criar um botão que muda de cor com o seguinte padrão:
+Seu fundo deve ser azul quando o mouse estiver afastado, verde enquanto estiver sobre o botão e vermelho, exibindo a mensagem "quebrei", quando clicado. Depois de "quebrado", ele não deve mais modificar.
+
+Dica: document.getElementById("p2").style.backgroundColor="blue";
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - FDW</title>
+</head>
+<body>
+    <button id="buttonId" onclick="buttonFunc()">Kyle Buttler</button>
+
+    <script>
+        function buttonFunc() {
+            buttonElement = document.getElementById('buttonId')
+            buttonElement.style.backgroundColor='red';
+            buttonElement.textContent = 'Quebrado';
+            buttonElement.disabled = true;
+            alert('Quebrei!')
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    body { display: flex; align-items: center; justify-content: center; }
+    button { border: solid; background-color: blue; width: 500px; height: 500px; font-size: 5rem; }
+    button:hover { background-color: green; }
+</style>

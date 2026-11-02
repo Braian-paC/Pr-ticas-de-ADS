@@ -1,0 +1,26 @@
+<!--
+Criar uma lista com marcadores personalizados e uma cor de fundo diferente para itens em posições pares e ímpares.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - FDW</title>
+</head>
+<body>
+    <h1 id="Impar">A. Item 1</h1>
+    <h1 id="Par">B. Item 2</h1>
+    <h1 id="Impar">C. Item 3</h1>
+    <h1 id="Par">D. Item 4</h1>
+    <h1 id="Impar">E. Item 5</h1>
+</body>
+</html>
+
+<style>
+    body { display: flex; margin: 0; padding: 0; justify-content: center; align-items: center; flex-direction: column; }
+    h1:hover { font-size: 3rem; }
+    #Impar { background-color: yellow; }
+    #Par { background-color: green; }
+</style>

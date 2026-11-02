@@ -1,0 +1,63 @@
+<!--
+Criar uma calculadora com as quatro operações básicas usando JavaScript
+Utilize dois campos input para o preenchimento dos valores, um campo select para a seleção da operação desejada, um campo div para resposta e um button para solicitar o cálculo
+
+document.getElementById("campoTexto").value = "10";
+parseInt("5");
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - FDM</title>
+
+    <script>
+        function calcular() {
+            let num01 = parseFloat(document.getElementById("num1").value)
+            let num02 = parseFloat(document.getElementById("num2").value)
+            let operacao = String(document.getElementById("selectOptions").value)
+            if (operacao == "soma") {
+                var total = num01+num02
+            }
+            if (operacao == "subtração") {
+                var total = num01-num02
+            }
+            if (operacao == "multiplicação") {
+                var total = num01*num02
+            }
+            if (operacao == "divisão") {
+                var total = num01/num02
+            }
+            document.getElementById("resultado").innerHTML = "Resultado: "+total
+        }
+    </script>
+
+</head>
+<body>
+    <div id="divCentral">
+        <div id="divCalculo">
+            <input type="number" id="num1" value=45>
+            <select id="selectOptions">
+                <option value="soma">+</option>
+                <option value="subtração">-</option>
+                <option value="multiplicação">x</option>
+                <option value="divisão">/</option>
+            </select>
+            <input type="number" id="num2" value=5>
+        </div>
+        <button type="submit" id="botão" onclick="calcular()">Calcular</button>
+        <div id="resposta">
+            <label id="resultado"></label>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body, html { position: fixed; margin: 0; padding: 0; width: 100%; height: 100%; }
+    
+    #divCentral { background-color: purple; display: flex; margin: 0; padding: 0; width: 100%; height: 100%; align-items: center; justify-content: center; flex-direction: column; }
+    input { text-align: center; }
+</style>

@@ -1,0 +1,22 @@
+<!--
+Criar uma imagem com um link que tenha comportamentos diferentes quando selecionado e quando o cursor está sobre a imagem.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - FDW</title>
+</head>
+<body>
+    <a href="https://4kwallpapers.com"><img src="Minato_Wallpaper.jpg"></a>
+</body>
+</html>
+
+<style>
+body, a { display: flex; margin: 0; padding: 0; align-items: center; justify-content: center; background-color: #e4a320;}
+img { width: 85%; height: 85%; }
+img:hover { opacity: 70%; width: 100%; height: 100%; transition: width 1s; }
+img:active { width: 100%; height: 100%; transition: width 1s; }
+</style>
